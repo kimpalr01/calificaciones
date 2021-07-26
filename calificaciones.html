@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hola Mundo</title>
+    <style>
+        body{
+            background-color: rgb(184, 89, 168);
+        }
+        .titulo{
+            color: #0000FF;
+        }
+        #texto{
+            border: hsl(115, 71%, 40%) 5px solid;
+        }
+        </style>
+</head>
+<body>
+    <div style="background-color: yellow;">
+        <h1 class="titulo">Hola Mundo</h1>
+        <p id="texto">lorem ipsum dolor sit amet. </p>
+    </div><!--comentario-->
+    <button onclick="alert('marlen invita los tacos')">click</button>
+    <button onclick="document.write(`<h1 style=color:red;>Bienvenidos a escuela de codigo</h1>`)">Aprietame</button>
+    <script>
+        //alert("hola mundo");
+        //comentario de una sola linea
+        /*comentario informativo*/
+        /**comentario documental**/
+        console.log("esto es un error");
+
+        var bienvenida = "Hola, Bienvenido a la sala de calificacion";
+
+        alert(bienvenida);
+        var nombre =prompt("Ingresa el nombre del estudiante") ;
+        var calificacion=prompt("ingresa tu calificacion en español");
+        var calificacion1=prompt("ingresa tu calificacion en matematicas");
+        var calificacion2=prompt("ingresa tu calificacion en ingles");
+
+        alert("el estudiante "+ nombre +" tiene de calificaciones: " + calificacion+" , "+calificacion1+" , "+calificacion2);
+
+        calificacion=parseFloat(calificacion);
+        calificacion1=parseFloat(calificacion1); 
+        calificacion2=parseFloat(calificacion2); 
+
+        calificacionfinal=(calificacion+calificacion1+calificacion2)/3;
+        alert("la calificacion final de "+nombre+" es: "+ calificacionfinal);
+        if (calificacion > 0 && calificacionfinal<=10) {
+           if (calificacionfinal<=5) {
+            alert("Reprobado el estudiante "+nombre); 
+           }
+           if (calificacionfinal<=7) {
+            alert("Aprobado el estudiante "+nombre); 
+           }
+           if (calificacionfinal<9) {
+            alert("Notable el estudiante "+nombre); 
+           }
+           if (calificacionfinal<10) {
+            alert("Sobresaliente el estudiante "+nombre); 
+           }
+           if (calificacionfinal==10) {
+            alert("Matricula de Honor el estudiante "+nombre); 
+           }
+        } else {
+           alert("error ingresa bien los datos"); 
+        } 
+
+
+    </script>
+</body>
+</html>
